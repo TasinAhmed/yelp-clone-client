@@ -23,6 +23,7 @@ const RestaurantDetailPage = () => {
     }
 
     fetchData();
+    // eslint-disable-next-line
   }, []);
 
   return (

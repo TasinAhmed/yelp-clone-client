@@ -1,6 +1,5 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import RestaurantFinder from "../api/RestaurantFinder";
-import { RestaurantsContext } from "../context/RestaurantsContext";
 import { useHistory, useLocation, useParams } from "react-router-dom";
 
 const AddReview = () => {
@@ -15,7 +14,7 @@ const AddReview = () => {
     e.preventDefault();
 
     try {
-      const { data } = await RestaurantFinder.post(`/${id}/add-review`, {
+      await RestaurantFinder.post(`/${id}/add-review`, {
         name,
         review,
         rating,

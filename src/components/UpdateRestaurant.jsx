@@ -29,7 +29,7 @@ const UpdateRestaurant = () => {
     e.preventDefault();
 
     try {
-      const { data } = await RestaurantFinder.put(`/${id}`, {
+      await RestaurantFinder.put(`/${id}`, {
         name,
         location,
         price_range: priceRange,
